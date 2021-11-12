@@ -1,0 +1,28 @@
+
+title 0.5
+
+Client->Server: Request the web page
+Server-->Client: Sends the html file
+
+note over Client:
+Sees there is a main.css and a spa.js file
+end note
+
+Client->Server: Request the main.css file
+Server-->Client: Sends the main.css file
+Client->Server: Request the spa.js file
+Server-->Client: Sends the spa.js file
+
+note over Client:
+Executes spa.js which request data.json 
+to the server 
+end note
+
+Client->Server: Request  data.json
+Server-->Client: Sends data.json
+
+note over Client:
+The event handler for the request to data.json gets executed 
+which updates the notes object and creates a list with all
+the notes
+end note

@@ -1,0 +1,26 @@
+
+title 0.4
+
+Client->Server: Request the web page
+Server-->Client: Sends the html file
+
+note over Client:
+Sees there is a main.css and a main.js file
+end note
+
+Client->Server: Request the main.css file
+Server-->Client: Sends the main.css file
+Client->Server: Request the main.js file
+Server-->Client: Sends the main.js file
+
+note over Client:
+Executes the main.js file and request for data.json
+end note
+
+Client->Server: Request  data.json
+Server-->Client: Sends data.json
+
+note over Client:
+The event handler for the request to data.json gets executed 
+and appends the data to the list
+end note

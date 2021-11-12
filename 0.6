@@ -1,0 +1,18 @@
+
+title 0.6
+
+note over Client:
+User writes a new note and saves it
+end note
+note over Client:
+Client creates a new note object pushes to 
+the notes array, reprints all the notes, and sends the new note to the
+server
+end note
+Client->Server: Sends new note to the server
+note over Server:
+Server persist the note in its storage and 
+answer back with a status code of 201
+end note
+Server-->Client: Answer back with status code 201
+
